@@ -1,0 +1,26 @@
+
+
+ <div class="container-fluid">
+    <div  style="position:unset">
+
+    <h2 style="text-align:center;color:blueviolet;">Book Details</h2>
+<h1>{{myCategory.books[this.id].name}}</h1>
+    <h1 style="color:brown"></h1>
+    <div class="container-fluid">
+        
+      <img [src]="myCategory.books[this.id].imgPath" width="300px" height="300px">
+
+    </div>
+    <a *ngIf="this.cI==0" [href]=link1[this.id]><button type="button" class="btn btn-warning">Download</button></a>
+    <a *ngIf="this.cI==1" [href]=link1[this.id]><button type="button" class="btn btn-warning">Download</button></a>
+    <a *ngIf="this.cI==2" [href]=link1[this.id]><button type="button" class="btn btn-warning">Download</button></a>
+    <a *ngIf="this.cI==3" [href]=link2[this.id]><button type="button" class="btn btn-warning">Download</button></a>
+    <a *ngIf="this.cI==4" [href]=link2[this.id]><button type="button" class="btn btn-warning">Download</button></a>
+    <a *ngIf="this.cI==5" [href]=link2[this.id]><button type="button" class="btn btn-warning">Download</button></a>
+
+  
+
+
+  </div>
+  </div>
+

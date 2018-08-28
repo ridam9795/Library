@@ -1,0 +1,113 @@
+<!--<div class="row">
+    <div class="col-sm-12">
+      <h1>Category</h1>
+      <div *ngFor="let cat of category;let i=index">-->
+       <!-- <div *ngFor="let book of books;let j=index">
+            {{category[1].books[j].name}}
+            
+        </div>
+      </div>
+  
+    
+  
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-7">
+        <div class="row">
+            <div class="col-sm-12">
+        <input type="text" #toAddBook placeholder="Search your Book here">
+        <button type="button" class="btn btn-primary" (click)="addBook()" >Search</button>
+            </div>
+        </div><br>
+        
+        <div class="row">
+            <div class="col-sm-12">
+              <label>Add Book Name</label><input type="text" #nameInput required>
+              <label>Add image <strong>URL</strong></label>    
+              <input type="text" #imageUrl required><br>
+              <button type="button" class="btn btn-primary" #btn (click)="addBook()"  >Add Book</button>
+             
+            </div>
+          </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="container-fluid">
+                <h2 style="text-align:center;color:darkgreen">List of available Books</h2>
+            </div>
+            </div>
+        </div>
+      
+        <div class="row">
+          <div class="col-sm-12">
+                  <div class="container-fluid " >
+                    <div *ngFor="let book of books;let j=index">
+      
+                          <a class="list-group-item clearfix" style="cursor: pointer"
+                           routerLinkActive="active" [routerLink]="['/books',this.id,this.id]" 
+                           >
+                              <div style="background-color:aquamarine">
+                               
+                              
+                                 <div class="pull-left">
+                               <h3 style="color:rgb(192, 6, 37) ">{{category[this.id].books[j].name}}
+                              </h3>
+                               <p style="color:crimson">Click to view detail</p>
+                               <span><a [routerLink]="['/bookIssued',this.index]">
+                                 <button type="button" class="btn btn-danger" 
+                                (click)="issueThis()" 
+                                 >Issue Book</button></a></span>
+                              </div>
+                               <div class="pull-right"><img [src]="category[this.id].books[j].imgPath" width="80px"
+                                  height="80px" align="right" >
+                               </div>
+                               
+                            
+                             
+                             
+                              </div>
+                                </a>
+                              </div>
+      
+                      </div>
+                  
+          </div>
+          
+      </div><br>
+      
+      
+    </div>
+    <div class="col-sm-5">
+  <app-book-details></app-book-details>
+    </div>
+  </div>-->
+
+
+
+  <div class="row" >
+    <div class="col-sm-7">
+      <!-- <app-book-list (featured)="selectedBook=$event" (myIssue)="onSelect($event)" ></app-book-list>-->
+      <app-book-list ></app-book-list>
+    </div>
+    <div class="col-sm-5">
+       <router-outlet ></router-outlet>
+   </div>
+           <!--<app-book-details *ngIf="selectedBook;else showText" [books]="selectedBook"></app-book-details>
+   <ng-template #showText>
+       <h1 style="color:chocolate">Please Select Any item!</h1>
+   </ng-template>    <router-outlet ></router-outlet>
+   
+    </div>-->
+   </div>
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+   

@@ -1,0 +1,95 @@
+<div class="row">
+  <div class="col-sm-12">
+
+    <nav class="navbar navbar-inverse " style="opacity: 3" >
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <div class="navbar-brand" ><img src="http://www.emilysbigwalk.org.uk/wp-content/uploads/2017/09/create-your-own-book.png" 
+            width="50px" height="30px"></div>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><h3 style="color:crimson;font-family: cursive;">E-LIBRARY</h3></li>
+               
+          
+                  
+                      <li routerLinkActive="active"><a [routerLink]="['/books']"
+                         style="color:darkorange " ><span class="icon fa-home">Home</span></a></li>
+                        
+
+       
+        </ul>
+        <ul class="nav navbar-nav ">
+            <li routerLinkActive="true" class=" dropdown  " appDropdown>
+            
+              <a 
+              style="color:darkorange;cursor: pointer; "
+            >
+                Category<span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu " style="background:lavender" >
+                  <li style="cursor: pointer" class="dropdown-item " routerLinkActive="active"
+                   ><a  style="color:mediumvioletred" [routerLink]="['/bookList',0]">Action</a> </li>
+                  <li   style="cursor: pointer" class="dropdown-item" routerLinkActive="active"
+                  style="color:mediumvioletred" [routerLink]="['/bookList',1]"><a  style="color:mediumvioletred"
+                  >Adventure</a></li>
+                  <li   style="cursor: pointer" class="dropdown-item" routerLinkActive="active"
+                  style="color:mediumvioletred" [routerLink]="['/bookList',2]"><a  style="color:mediumvioletred">
+                    fiction</a></li>
+                  
+
+                  <li   style="cursor: pointer" routerLinkActive="active"
+                  style="color:mediumvioletred" class="dropdown-item">
+                  <a  style="color:mediumvioletred " [routerLink]="['/bookList',3]">
+                      Engineering
+                      <ul class="dropdown-menu">
+                        <li ><a>Ece</a></li>
+                      </ul>
+                  </a></li>
+                  <li   style="cursor: pointer" 
+                  style="color:mediumvioletred"class="dropdown-item">
+                  <a  style="color:mediumvioletred" [routerLink]="['/bookList',4]">
+
+                  Medical</a></li>
+                  <li   style="cursor: pointer" routerLinkActive="active"
+                  style="color:mediumvioletred"class="dropdown-item">
+                  <a  style="color:mediumvioletred" [routerLink]="['/bookList',5]">
+
+                  Commerce</a></li>
+                
+      
+              </ul>
+  
+         
+          </li>
+            <!--<li><a href="#" (click)="onNavigate('About-book')">About Book</a></li>
+
+          <li ><a href="#" (click)="onNavigate('Book-issued')">Book-issued</a></li>
+          <li ><a href="#" (click)="onNavigate('Add New Books')">Add New Books</a></li>
+
+         <!-- <li><a href="#" (click)="onNavigate('Issue-book')")>Issue Book</a></li>-->
+      </ul>
+     
+      <ul class="nav navbar-nav navbar-right">
+       <li  *ngIf="isAuthenticated()"><a (click)="onSaveData()" 
+        style="margin-right: 20px;color:ivory;cursor: pointer">Update</a></li>  
+          <li><a
+            style="cursor: pointer;margin-right: 10px;color:ivory"
+            (click)="onLogout()"
+            *ngIf="isAuthenticated()" > Logout</a></li>
+            <li><a *ngIf="isAuthenticated()" style="color:ivory">{{username}}</a></li>
+  <ng-template [ngIf]="!isAuthenticated()">
+      <li><a [routerLink]="['login']" style="margin-right: 10px;color:ivory;cursor: pointer">
+          <span class="glyphicon glyphicon-log-in" ></span>Login</a></li>
+      <li  ><a [routerLink]="['sign-up']" style="margin-right: 20px;color:ivory;cursor: pointer">
+          <span class="glyphicon glyphicon-user"></span>Sign-up</a></li>
+      
+        
+
+  </ng-template>
+        
+        </ul>
+      </div>
+    </nav>
+
+  </div>
+</div>

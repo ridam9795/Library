@@ -1,0 +1,37 @@
+<body style="background-color: darksalmon">
+<h3 style="color: green;text-align: center;font-family: fantasy">List of Available Books</h3>
+<button type="button" class="btn btn-primary" [routerLink]="['new']" *ngIf="isAuthenticated()" >New Book</button>
+
+<div *ngFor="let book of books;let i=index "  >
+
+
+    <div class="row">
+    <div class="col-sm-12">
+      <div class="container-fluid " >
+
+<a class="list-group-item clearfix" style="cursor: pointer"
+ [routerLink]="[i]" routerLinkActive="active" 
+data-toggle="tooltip" title="Please Click to view details">
+
+
+<div class="pull-left">
+<h3 style="color:rgb(192, 6, 37) ">{{book.name}}</h3>
+<p style="color:crimson">{{book.Author}}</p>
+
+</div>
+<div class="pull-right"><img [src]="book.imgPath" width="80px"
+height="80px" align="right" >
+</div>
+
+</a>
+
+
+     </div>
+    </div>
+    </div>
+   </div>
+
+
+<br>
+</body>
+

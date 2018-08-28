@@ -1,0 +1,41 @@
+<div *ngIf="isAuthenticated()">
+<h1 style="color:darkslateblue;font-family: fantasy">Add New Book Details Here</h1>
+<form  #f="ngForm" >
+ 
+<div class="form-group">
+    <label for="Book-Name" for="bname">Book Name</label>
+    <input type="text" class="form-control" name="bname" ngModel>
+
+  </div>
+  <div class="form-group">
+    <label for="Book-url" for="imgPath">Image-url</label>
+    <input type="text" class="form-control" ngModel name="imgPath">
+  </div>
+  <div class="form-group">
+    <label>Author</label>
+    <input type="text" class="form-control" ngModel name="Author">
+  </div>
+  <div class="form-group">
+      <label>Book Url</label>
+      <input type="text" class="form-control">
+    </div>
+ <div class="form-group">
+<label>Select Category</label>
+<select class="form-control">
+  <option>Action</option>
+  <option>Adventure</option>
+  <option>fiction</option>
+  <option>Engineering </option>
+  <option>Medical</option>
+  <option>Commerce</option>
+
+
+</select>
+ </div>
+
+  <div class="form-group">
+      <button type="button" class="btn btn-danger" (click)="addBook(f)">Add</button>
+      <button type="button" class="btn btn-danger" [routerLink]="['/books']">Cancel</button>
+  </div>
+</form>
+</div>

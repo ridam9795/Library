@@ -1,0 +1,33 @@
+
+
+  
+    <form (ngSubmit)="onLogin(f)" #f="ngForm" 
+ style="background-color:darkseagreen"
+    style="margin-top: 100px"
+    >
+    <h3 style="color:rgb(218, 32, 32);text-align: center">Login here</h3>
+
+      <div class="form-group">
+        <label for="email">Mail</label>
+        <input type="email" id="email" name="email" ngModel class="form-control" required #email email>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          ngModel
+          class="form-control" required >
+      </div>
+      <button class="btn btn-primary" type="submit" [disabled]="!f.valid"  >Login</button>
+      <br>
+      <br>
+      <a (click)="resetPassword(email.value)" style="cursor: pointer;" >forget Password</a>
+      <h3  *ngIf="forgetPass && !email.valid">Please enter valid email address</h3>
+      <h3 *ngIf="f.valid &&  loggedIn "  style="color:green">You have successfully Logged In</h3>
+    </form>
+
+  
+
+
